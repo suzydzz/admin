@@ -25,7 +25,9 @@ function FirstPage() {
   }, [local]);
   // для сохранения задач в localStorage
 
-  
+  const handleLogin = () => {
+    navigate("/admin/second-page");
+  };
 
 
   return (
@@ -35,11 +37,21 @@ function FirstPage() {
         <div className="box">
           <div className="login">
             <h2 className="titleTwo">Логин</h2>
-            <input type="text" className="input" />
+            <input
+              type="text"
+              value={email}
+              className="input"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="login">
             <h2 className="titleTwo">Пароль</h2>
-            <input type="text" className="input" />
+            <input 
+            type="password" 
+            className="input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
           <div className="login">
             <h2></h2>

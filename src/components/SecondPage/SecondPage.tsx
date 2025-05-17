@@ -1,8 +1,30 @@
+import "./style.css";
+import { useNavigate } from "react-router-dom";
+
+
+
 function SecondPage() {
+    const navigate = useNavigate();
+    const handleFirstButton = () => {
+      navigate("/admin/third-page");
+    };
+
+    const handleSecondButton = () => {
+      navigate("/admin/forth-page");
+    };
+
   return (
-    <div>
-      <h1>Это вторая страница!</h1>
-      <p>Добро пожаловать после входа.</p>
+    <div className="backgroundSecond">
+      <div className="backSecond">
+        <div className="flex">
+          <button className="firstButton" onClick={handleFirstButton}>
+            Воронки
+          </button>
+          <button className="firstButton" onClick={handleSecondButton}>
+            Продукты
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

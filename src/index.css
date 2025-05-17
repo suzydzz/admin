@@ -33,9 +33,6 @@ body {
   line-height: normal;
 }
 
-.box{
-  
-}
 
 .login {
   color: #000;
@@ -78,4 +75,8 @@ border-radius: 10px;
 background: #D0D0D0;
 border: transparent;
 
+}
+
+.button:hover{
+  background: #8e8e8e
 }

@@ -3,28 +3,24 @@
 // import viteLogo from "/vite.svg";
 import "./index.css";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import FirstPage from "./components/FirstPage/FirstPage";
+import SecondPage from "./components/SecondPage/SecondPage";
 
 function App() {
   return (
-    <div className="background">
-      <div className="back">
-        <h1 className="title">Вход</h1>
-        <div className="box">
-          <div className="login">
-            <h2 className="titleTwo">Логин</h2>
-            <input type="text" className="input" />
-          </div>
-          <div className="login">
-            <h2 className="titleTwo">Пароль</h2>
-            <input type="text" className="input" />
-          </div>
-          <div className="login">
-            <h2></h2>
-            <button className="button">Войти</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/admin/" element={<FirstPage />} />{" "}
+      <Route path="/admin/second-page" element={<SecondPage />} />{" "}
+      <Route
+        path="*"
+        element={
+          <h1>
+            <div style={{ display: "flex" , justifyContent:"center", alignItems: "center"}}>Страница не найдена 😞</div>
+          </h1>
+        }
+      />
+    </Routes>
   );
 }
 

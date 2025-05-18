@@ -41,6 +41,7 @@ function FirstPage() {
               type="text"
               value={email}
               className="input"
+              name="email"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -50,6 +51,7 @@ function FirstPage() {
             type="password" 
             className="input"
             value={password}
+            name="password"
             onChange={(e) => setPassword(e.target.value)}
             />
           </div>
